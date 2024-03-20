@@ -1,0 +1,55 @@
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m Hidden API policy (https://developer.android.com/guide/app-compatibility/restrictions-non-sdk-interfaces) cannot be enabled. This might be happening because the device under test is not configured properly. Please check https://github.com/appium/appium/issues/13802 for more details. You could also set the "appium:ignoreHiddenApiPolicyError" capability to true in order to ignore this error, which might later lead to unexpected crashes or behavior of the automation server. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\Phuong\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 88a2cf2d shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1'' exited with code 255'; Command output: 
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m Exception occurred while executing 'put':
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2120)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1296)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.insertGlobalSetting(SettingsProvider.java:1250)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:403)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.content.ContentProvider.call(ContentProvider.java:2486)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.content.ContentProvider$Transport.call(ContentProvider.java:522)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService$MyShellCommand.putForUser(SettingsService.java:375)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:277)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:98)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.ShellCommand.exec(ShellCommand.java:44)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.shellCommand(Binder.java:935)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.onTransact(Binder.java:819)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.execTransactInternal(Binder.java:1165)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.execTransact(Binder.java:1129)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m Exception occurred while executing 'put':
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2120)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1296)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.insertGlobalSetting(SettingsProvider.java:1250)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:403)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.content.ContentProvider.call(ContentProvider.java:2486)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.content.ContentProvider$Transport.call(ContentProvider.java:522)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService$MyShellCommand.putForUser(SettingsService.java:375)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:277)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:98)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.ShellCommand.exec(ShellCommand.java:44)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.shellCommand(Binder.java:935)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.onTransact(Binder.java:819)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.execTransactInternal(Binder.java:1165)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.execTransact(Binder.java:1129)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m Exception occurred while executing 'put':
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2120)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1296)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.insertGlobalSetting(SettingsProvider.java:1250)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:403)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.content.ContentProvider.call(ContentProvider.java:2486)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.content.ContentProvider$Transport.call(ContentProvider.java:522)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService$MyShellCommand.putForUser(SettingsService.java:375)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:277)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:98)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.ShellCommand.exec(ShellCommand.java:44)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.shellCommand(Binder.java:935)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.onTransact(Binder.java:819)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.execTransactInternal(Binder.java:1165)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 	at android.os.Binder.execTransact(Binder.java:1129)
+[38;5;48m[AndroidUiautomator2Driver@0044 (c2db06fe)][0m 

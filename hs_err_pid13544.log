@@ -1,0 +1,728 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 872656 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (arena.cpp:189), pid=13544, tid=13068
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.7+7 (17.0.7+7) (build 17.0.7+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.7+7 (17.0.7+7, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dgroovy.home=C:\Users\Phuong/.groovy -Djava.system.class.loader=groovy.lang.GroovyClassLoader -Xmx2048m -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages org.codehaus.groovy.tools.GroovyStarter --classpath C:\Users\Phuong\Katalon Studio\FixAllNow\bin\keyword;C:\Users\Phuong\Katalon Studio\FixAllNow\Keywords;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\listener;C:\Users\Phuong\Katalon Studio\FixAllNow\Test Listeners;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\lib;C:\Users\Phuong\Katalon Studio\FixAllNow\Libs;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\groovy;C:\Users\Phuong\Katalon Studio\FixAllNow\Include\scripts\groovy;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-collections4-4.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-validator-1.6.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\curvesapi-1.04.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\dnsjava-2.1.8.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-ant-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-astbuilder-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-cli-picocli-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-console-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-datetime-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-dateutil-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-docgenerator-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-groovydoc-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-groovysh-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-jmx-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-json-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-jsr223-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-macro-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-nio-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-servlet-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-sql-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-swing-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-templates-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-test-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-test-junit5-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-testng-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\groovy-xml-3.0.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\java-client-7.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\javax.servlet-api_3.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\jna-5.12.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\jna-platform-5.12.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\jzlib-1.1.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\kat-server.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\littleproxy-1.1.0-beta-bmp-17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\log4j-1.2-api-2.17.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\log4j-api-2.17.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\log4j-core-2.17.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\mitm-2.1.5.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\netty-all-4.1.70.Final.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\poi-3.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\poi-ooxml-3.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\poi-ooxml-schemas-3.17.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\proxy-vole-1.0.4-SNAPSHOT-jar-with-dependencies.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\repackaged-sikuli-api-1.0.2-standalone.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\selenium-leg-rc-3.141.59.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\selenium-server-standalone-3.141.59.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\selenium-shutterbug-1.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\slf4j-api-1.7.25.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\soap-builder-1.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\soap-common-1.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\soap-legacy-1.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\spring-context-5.3.19.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\stax2-api-4.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\su.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\testng-7.8.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\wadl.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\xmlbeans-3.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\net.sf.supercsv.super-csv_2.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.io_2.4.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.lang_2.6.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.google.gson_2.10.1.v20230109-0753.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.jsoup_1.14.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.dbutils_1.6.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.oracle.jdbc.ojdbc7_12.1.0.2.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.postgresql.jdbc_42.4.1.jar;c:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.eclipse.osgi_3.18.300.v20230220-1352.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.constant_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.eclipse.persistence.eclipselink_2.7.11.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.selenium-standalone_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\atu.testrecorder.screen-recorder_2.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.google.guava_23.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.util_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.httpcomponents.httpclient_4.5.14.v20221207-1049.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.httpcomponents.httpcore_4.4.16.v20221207-1049.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.httpcomponents.httpmime_4.5.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.lang3_3.7.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.greenrobot.eventbus_3.1.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.assertj.core_3.10.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.junit_4.13.2.v20211018-1956.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.fasterxml.jackson.core.jackson-databind_2.14.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.fasterxml.jackson.core.jackson-core_2.14.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.fasterxml.jackson.core.jackson-annotations_2.14.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\ch.qos.logback.classic_1.2.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\ch.qos.logback.core_1.2.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\slf4j.api_1.7.36.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.fusesource.jansi_1.17.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.netlightbody_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.poi_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.commons-text_1.10.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.proxyvole_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.microsoft.sqlserver.mssql-jdbc_6.2.2.jre8.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.github.kklisura.cdt.java-client_2.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\javax.websocket-api_1.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.tyrus.container-grizzly-client_1.13.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.grizzly.http-server_2.3.25.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.grizzly.framework_2.3.25.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.grizzly.http_2.3.25.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.tyrus.client_1.13.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.tyrus.core_1.13.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.tyrus.spi_1.13.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\javassist_3.28.0.GA.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.graphql-java_16.2.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.jaxb.runtime_2.3.6.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.glassfish.jaxb.txw2_2.3.6.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.dom4j_1.6.1.v201312101416.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.groovy-extended_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.sun.activation.javax.activation_1.2.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\jakarta.xml.bind-api_2.3.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.sun.xml.bind.jaxb-impl_2.3.6.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.logging_1.2.0.v20180409-1502.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.beanshell.bsh_2.0.0.0b4.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.ant.launcher_1.9.6.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.appium_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.logging_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.eclipse.equinox.common_3.17.100.v20230202-1341.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.webui_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.json_20140107.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.eclipse.e4.core.contexts_1.11.0.v20220716-0839.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.eclipse.e4.core.services_2.3.400.v20220915-1347.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.mobile_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.commons.commons-validator_1.7.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.cucumber_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.core_3.0.2.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.datatable_1.0.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.datatable-dependencies_1.0.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.expressions_5.0.19.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.gherkin_5.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.html_0.2.7.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.java_3.0.2.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.tag-expressions_1.1.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\io.cucumber.junit_3.0.2.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.webservice_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\wsdl4j_1.6.2.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.google.oauth-client.google-oauth-client_1.22.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.google.http-client.google-http-client_1.22.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\ca.juliusdavies.not-yet-commons-ssl_0.3.11.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.preferences_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.apache.xmlbeans_3.1.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.entity_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.antlr.antlr4-runtime_4.8.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.networknt.json-schema-validator_1.0.66.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\jakarta.xml.ws-api_2.3.3.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\javax.xml.soap-api_1.4.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.windows_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core.testng_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\org.eclipse.osgi\27\0\.cp\resources\basic-report\katalon-studio-report-plugin.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.codehaus.groovy_3.0.17.v202303311542-e2303\lib\groovy-3.0.17-indy.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\org.codehaus.groovy_3.0.17.v202303311542-e2303\lib\ivy-2.5.1.jar --main groovy.ui.GroovyMain --encoding UTF-8 --indy C:\Users\Phuong\Katalon Studio\FixAllNow\Libs\TempTestCase1710744157629.groovy
+
+Host: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Mon Mar 18 13:43:08 2024 SE Asia Standard Time elapsed time: 22.364003 seconds (0d 0h 0m 22s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000012b1f2d6f10):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=13068, stack(0x0000000663300000,0x0000000663400000)]
+
+
+Current CompileTask:
+C2:  22364 4882       4       java.lang.invoke.MethodType::makeImpl (109 bytes)
+
+Stack: [0x0000000663300000,0x0000000663400000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67754a]
+V  [jvm.dll+0x834304]
+V  [jvm.dll+0x835aae]
+V  [jvm.dll+0x836113]
+V  [jvm.dll+0x24696f]
+V  [jvm.dll+0xac0ac]
+V  [jvm.dll+0xac67c]
+V  [jvm.dll+0x364de2]
+V  [jvm.dll+0x32f6b1]
+V  [jvm.dll+0x32eb5a]
+V  [jvm.dll+0x219641]
+V  [jvm.dll+0x218a61]
+V  [jvm.dll+0x1a4d8d]
+V  [jvm.dll+0x2284da]
+V  [jvm.dll+0x226615]
+V  [jvm.dll+0x7ea90b]
+V  [jvm.dll+0x7e4e7a]
+V  [jvm.dll+0x676395]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000012b24b89660, length=15, elements={
+0x0000012b052319f0, 0x0000012b1f29f640, 0x0000012b1f2a0040, 0x0000012b1f2c53b0,
+0x0000012b1f2c5c70, 0x0000012b1f2c8540, 0x0000012b1f2cae10, 0x0000012b1f2d6f10,
+0x0000012b1f2d7810, 0x0000012b1f2d8110, 0x0000012b1f5932d0, 0x0000012b2410b110,
+0x0000012b267c4d40, 0x0000012b25f97160, 0x0000012b25ad0380
+}
+
+Java Threads: ( => current thread )
+  0x0000012b052319f0 JavaThread "Forwarding newSession on session null to remote" [_thread_in_vm, id=14816, stack(0x0000000662600000,0x0000000662700000)]
+  0x0000012b1f29f640 JavaThread "Reference Handler" daemon [_thread_blocked, id=4964, stack(0x0000000662d00000,0x0000000662e00000)]
+  0x0000012b1f2a0040 JavaThread "Finalizer" daemon [_thread_blocked, id=5316, stack(0x0000000662e00000,0x0000000662f00000)]
+  0x0000012b1f2c53b0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=14652, stack(0x0000000662f00000,0x0000000663000000)]
+  0x0000012b1f2c5c70 JavaThread "Attach Listener" daemon [_thread_blocked, id=7720, stack(0x0000000663000000,0x0000000663100000)]
+  0x0000012b1f2c8540 JavaThread "Service Thread" daemon [_thread_blocked, id=13636, stack(0x0000000663100000,0x0000000663200000)]
+  0x0000012b1f2cae10 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=11396, stack(0x0000000663200000,0x0000000663300000)]
+=>0x0000012b1f2d6f10 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=13068, stack(0x0000000663300000,0x0000000663400000)]
+  0x0000012b1f2d7810 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=3068, stack(0x0000000663400000,0x0000000663500000)]
+  0x0000012b1f2d8110 JavaThread "Sweeper thread" daemon [_thread_blocked, id=15644, stack(0x0000000663500000,0x0000000663600000)]
+  0x0000012b1f5932d0 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=10472, stack(0x0000000663600000,0x0000000663700000)]
+  0x0000012b2410b110 JavaThread "Notification Thread" daemon [_thread_blocked, id=1800, stack(0x0000000663700000,0x0000000663800000)]
+  0x0000012b267c4d40 JavaThread "Thread-0" [_thread_blocked, id=15908, stack(0x0000000664100000,0x0000000664200000)]
+  0x0000012b25f97160 JavaThread "UrlChecker-2" daemon [_thread_blocked, id=1376, stack(0x0000000664200000,0x0000000664300000)]
+  0x0000012b25ad0380 JavaThread "Keep-Alive-Timer" daemon [_thread_blocked, id=15504, stack(0x0000000664400000,0x0000000664500000)]
+
+Other Threads:
+  0x0000012b1f277c40 VMThread "VM Thread" [stack: 0x0000000662c00000,0x0000000662d00000] [id=10580]
+  0x0000012b052ac590 WatcherThread [stack: 0x0000000663800000,0x0000000663900000] [id=10232]
+  0x0000012b0528fa80 GCTaskThread "GC Thread#0" [stack: 0x0000000662700000,0x0000000662800000] [id=2848]
+  0x0000012b24329a70 GCTaskThread "GC Thread#1" [stack: 0x0000000663900000,0x0000000663a00000] [id=8968]
+  0x0000012b24438790 GCTaskThread "GC Thread#2" [stack: 0x0000000663a00000,0x0000000663b00000] [id=13772]
+  0x0000012b25155430 GCTaskThread "GC Thread#3" [stack: 0x0000000663b00000,0x0000000663c00000] [id=12928]
+  0x0000012b25125c50 GCTaskThread "GC Thread#4" [stack: 0x0000000663c00000,0x0000000663d00000] [id=9264]
+  0x0000012b25247c80 GCTaskThread "GC Thread#5" [stack: 0x0000000663d00000,0x0000000663e00000] [id=16288]
+  0x0000012b24b3c650 GCTaskThread "GC Thread#6" [stack: 0x0000000663e00000,0x0000000663f00000] [id=9144]
+  0x0000012b24780740 GCTaskThread "GC Thread#7" [stack: 0x0000000663f00000,0x0000000664000000] [id=14884]
+  0x0000012b052a0f70 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000000662800000,0x0000000662900000] [id=12504]
+  0x0000012b052a1790 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000000662900000,0x0000000662a00000] [id=14568]
+  0x0000012b267546a0 ConcurrentGCThread "G1 Conc#1" [stack: 0x0000000664000000,0x0000000664100000] [id=14776]
+  0x0000012b1efb9e80 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000000662a00000,0x0000000662b00000] [id=6220]
+  0x0000012b1efba6b0 ConcurrentGCThread "G1 Service" [stack: 0x0000000662b00000,0x0000000662c00000] [id=15992]
+
+Threads with active compile tasks:
+C2 CompilerThread0    22405 4882       4       java.lang.invoke.MethodType::makeImpl (109 bytes)
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000100000000-0x0000000140000000, reserved size: 1073741824
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3, Narrow klass range: 0x140000000
+
+GC Precious Log:
+ CPUs: 8 total, 8 available
+ Memory: 7971M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 126M
+ Heap Max Capacity: 2G
+ Pre-touch: Disabled
+ Parallel Workers: 8
+ Concurrent Workers: 2
+ Concurrent Refinement Workers: 8
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 95232K, used 61014K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 35 young (35840K), 6 survivors (6144K)
+ Metaspace       used 40245K, committed 40768K, reserved 1114112K
+  class space    used 4443K, committed 4672K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x0000000080000000, 0x0000000080100000, 0x0000000080100000|100%|HS|  |TAMS 0x0000000080100000, 0x0000000080000000| Complete 
+|   1|0x0000000080100000, 0x0000000080200000, 0x0000000080200000|100%|HS|  |TAMS 0x0000000080200000, 0x0000000080100000| Complete 
+|   2|0x0000000080200000, 0x0000000080300000, 0x0000000080300000|100%|HS|  |TAMS 0x0000000080300000, 0x0000000080200000| Complete 
+|   3|0x0000000080300000, 0x0000000080400000, 0x0000000080400000|100%|HC|  |TAMS 0x0000000080400000, 0x0000000080300000| Complete 
+|   4|0x0000000080400000, 0x0000000080500000, 0x0000000080500000|100%| O|  |TAMS 0x0000000080500000, 0x0000000080400000| Untracked 
+|   5|0x0000000080500000, 0x0000000080600000, 0x0000000080600000|100%| O|  |TAMS 0x0000000080600000, 0x0000000080500000| Untracked 
+|   6|0x0000000080600000, 0x0000000080700000, 0x0000000080700000|100%| O|  |TAMS 0x0000000080700000, 0x0000000080600000| Untracked 
+|   7|0x0000000080700000, 0x0000000080800000, 0x0000000080800000|100%| O|  |TAMS 0x0000000080800000, 0x0000000080700000| Untracked 
+|   8|0x0000000080800000, 0x0000000080900000, 0x0000000080900000|100%| O|  |TAMS 0x0000000080900000, 0x0000000080800000| Untracked 
+|   9|0x0000000080900000, 0x0000000080a00000, 0x0000000080a00000|100%| O|  |TAMS 0x0000000080a00000, 0x0000000080900000| Untracked 
+|  10|0x0000000080a00000, 0x0000000080b00000, 0x0000000080b00000|100%| O|  |TAMS 0x0000000080b00000, 0x0000000080a00000| Untracked 
+|  11|0x0000000080b00000, 0x0000000080c00000, 0x0000000080c00000|100%| O|  |TAMS 0x0000000080c00000, 0x0000000080b00000| Untracked 
+|  12|0x0000000080c00000, 0x0000000080d00000, 0x0000000080d00000|100%| O|  |TAMS 0x0000000080d00000, 0x0000000080c00000| Untracked 
+|  13|0x0000000080d00000, 0x0000000080e00000, 0x0000000080e00000|100%| O|  |TAMS 0x0000000080e00000, 0x0000000080d00000| Untracked 
+|  14|0x0000000080e00000, 0x0000000080f00000, 0x0000000080f00000|100%| O|  |TAMS 0x0000000080f00000, 0x0000000080e00000| Untracked 
+|  15|0x0000000080f00000, 0x0000000081000000, 0x0000000081000000|100%| O|  |TAMS 0x0000000081000000, 0x0000000080f00000| Untracked 
+|  16|0x0000000081000000, 0x0000000081100000, 0x0000000081100000|100%| O|  |TAMS 0x0000000081100000, 0x0000000081000000| Untracked 
+|  17|0x0000000081100000, 0x0000000081200000, 0x0000000081200000|100%| O|  |TAMS 0x0000000081200000, 0x0000000081100000| Untracked 
+|  18|0x0000000081200000, 0x0000000081269a00, 0x0000000081300000| 41%| O|  |TAMS 0x0000000081269a00, 0x0000000081200000| Untracked 
+|  19|0x0000000081300000, 0x0000000081400000, 0x0000000081400000|100%| O|  |TAMS 0x0000000081400000, 0x0000000081300000| Untracked 
+|  20|0x0000000081400000, 0x0000000081500000, 0x0000000081500000|100%| O|  |TAMS 0x0000000081500000, 0x0000000081400000| Untracked 
+|  21|0x0000000081500000, 0x0000000081600000, 0x0000000081600000|100%| O|  |TAMS 0x0000000081600000, 0x0000000081500000| Untracked 
+|  22|0x0000000081600000, 0x0000000081700000, 0x0000000081700000|100%| O|  |TAMS 0x0000000081700000, 0x0000000081600000| Untracked 
+|  23|0x0000000081700000, 0x0000000081800000, 0x0000000081800000|100%| O|  |TAMS 0x0000000081800000, 0x0000000081700000| Untracked 
+|  24|0x0000000081800000, 0x0000000081900000, 0x0000000081900000|100%| O|  |TAMS 0x0000000081900000, 0x0000000081800000| Untracked 
+|  25|0x0000000081900000, 0x0000000081a00000, 0x0000000081a00000|100%| O|  |TAMS 0x0000000081a00000, 0x0000000081900000| Untracked 
+|  26|0x0000000081a00000, 0x0000000081ae6600, 0x0000000081b00000| 89%| O|  |TAMS 0x0000000081ae6600, 0x0000000081a00000| Untracked 
+|  27|0x0000000081b00000, 0x0000000081b00000, 0x0000000081c00000|  0%| F|  |TAMS 0x0000000081b00000, 0x0000000081b00000| Untracked 
+|  28|0x0000000081c00000, 0x0000000081c00000, 0x0000000081d00000|  0%| F|  |TAMS 0x0000000081c00000, 0x0000000081c00000| Untracked 
+|  29|0x0000000081d00000, 0x0000000081d00000, 0x0000000081e00000|  0%| F|  |TAMS 0x0000000081d00000, 0x0000000081d00000| Untracked 
+|  30|0x0000000081e00000, 0x0000000081e00000, 0x0000000081f00000|  0%| F|  |TAMS 0x0000000081e00000, 0x0000000081e00000| Untracked 
+|  31|0x0000000081f00000, 0x0000000081f00000, 0x0000000082000000|  0%| F|  |TAMS 0x0000000081f00000, 0x0000000081f00000| Untracked 
+|  32|0x0000000082000000, 0x0000000082000000, 0x0000000082100000|  0%| F|  |TAMS 0x0000000082000000, 0x0000000082000000| Untracked 
+|  33|0x0000000082100000, 0x0000000082100000, 0x0000000082200000|  0%| F|  |TAMS 0x0000000082100000, 0x0000000082100000| Untracked 
+|  34|0x0000000082200000, 0x0000000082200000, 0x0000000082300000|  0%| F|  |TAMS 0x0000000082200000, 0x0000000082200000| Untracked 
+|  35|0x0000000082300000, 0x0000000082300000, 0x0000000082400000|  0%| F|  |TAMS 0x0000000082300000, 0x0000000082300000| Untracked 
+|  36|0x0000000082400000, 0x0000000082400000, 0x0000000082500000|  0%| F|  |TAMS 0x0000000082400000, 0x0000000082400000| Untracked 
+|  37|0x0000000082500000, 0x0000000082500000, 0x0000000082600000|  0%| F|  |TAMS 0x0000000082500000, 0x0000000082500000| Untracked 
+|  38|0x0000000082600000, 0x0000000082600000, 0x0000000082700000|  0%| F|  |TAMS 0x0000000082600000, 0x0000000082600000| Untracked 
+|  39|0x0000000082700000, 0x0000000082700000, 0x0000000082800000|  0%| F|  |TAMS 0x0000000082700000, 0x0000000082700000| Untracked 
+|  40|0x0000000082800000, 0x0000000082800000, 0x0000000082900000|  0%| F|  |TAMS 0x0000000082800000, 0x0000000082800000| Untracked 
+|  41|0x0000000082900000, 0x0000000082900000, 0x0000000082a00000|  0%| F|  |TAMS 0x0000000082900000, 0x0000000082900000| Untracked 
+|  42|0x0000000082a00000, 0x0000000082a00000, 0x0000000082b00000|  0%| F|  |TAMS 0x0000000082a00000, 0x0000000082a00000| Untracked 
+|  43|0x0000000082b00000, 0x0000000082b00000, 0x0000000082c00000|  0%| F|  |TAMS 0x0000000082b00000, 0x0000000082b00000| Untracked 
+|  44|0x0000000082c00000, 0x0000000082c00000, 0x0000000082d00000|  0%| F|  |TAMS 0x0000000082c00000, 0x0000000082c00000| Untracked 
+|  45|0x0000000082d00000, 0x0000000082d00000, 0x0000000082e00000|  0%| F|  |TAMS 0x0000000082d00000, 0x0000000082d00000| Untracked 
+|  46|0x0000000082e00000, 0x0000000082e00000, 0x0000000082f00000|  0%| F|  |TAMS 0x0000000082e00000, 0x0000000082e00000| Untracked 
+|  47|0x0000000082f00000, 0x0000000082f00000, 0x0000000083000000|  0%| F|  |TAMS 0x0000000082f00000, 0x0000000082f00000| Untracked 
+|  48|0x0000000083000000, 0x0000000083000000, 0x0000000083100000|  0%| F|  |TAMS 0x0000000083000000, 0x0000000083000000| Untracked 
+|  49|0x0000000083100000, 0x0000000083100000, 0x0000000083200000|  0%| F|  |TAMS 0x0000000083100000, 0x0000000083100000| Untracked 
+|  50|0x0000000083200000, 0x0000000083200000, 0x0000000083300000|  0%| F|  |TAMS 0x0000000083200000, 0x0000000083200000| Untracked 
+|  51|0x0000000083300000, 0x0000000083300000, 0x0000000083400000|  0%| F|  |TAMS 0x0000000083300000, 0x0000000083300000| Untracked 
+|  52|0x0000000083400000, 0x0000000083400000, 0x0000000083500000|  0%| F|  |TAMS 0x0000000083400000, 0x0000000083400000| Untracked 
+|  53|0x0000000083500000, 0x0000000083500000, 0x0000000083600000|  0%| F|  |TAMS 0x0000000083500000, 0x0000000083500000| Untracked 
+|  54|0x0000000083600000, 0x0000000083600000, 0x0000000083700000|  0%| F|  |TAMS 0x0000000083600000, 0x0000000083600000| Untracked 
+|  55|0x0000000083700000, 0x0000000083700000, 0x0000000083800000|  0%| F|  |TAMS 0x0000000083700000, 0x0000000083700000| Untracked 
+|  56|0x0000000083800000, 0x0000000083800000, 0x0000000083900000|  0%| F|  |TAMS 0x0000000083800000, 0x0000000083800000| Untracked 
+|  57|0x0000000083900000, 0x0000000083945b90, 0x0000000083a00000| 27%| S|CS|TAMS 0x0000000083900000, 0x0000000083900000| Complete 
+|  58|0x0000000083a00000, 0x0000000083b00000, 0x0000000083b00000|100%| S|CS|TAMS 0x0000000083a00000, 0x0000000083a00000| Complete 
+|  59|0x0000000083b00000, 0x0000000083c00000, 0x0000000083c00000|100%| S|CS|TAMS 0x0000000083b00000, 0x0000000083b00000| Complete 
+|  60|0x0000000083c00000, 0x0000000083d00000, 0x0000000083d00000|100%| S|CS|TAMS 0x0000000083c00000, 0x0000000083c00000| Complete 
+|  61|0x0000000083d00000, 0x0000000083e00000, 0x0000000083e00000|100%| S|CS|TAMS 0x0000000083d00000, 0x0000000083d00000| Complete 
+|  62|0x0000000083e00000, 0x0000000083f00000, 0x0000000083f00000|100%| S|CS|TAMS 0x0000000083e00000, 0x0000000083e00000| Complete 
+|  63|0x0000000083f00000, 0x0000000083f00000, 0x0000000084000000|  0%| F|  |TAMS 0x0000000083f00000, 0x0000000083f00000| Untracked 
+|  64|0x0000000084000000, 0x0000000084100000, 0x0000000084100000|100%| E|  |TAMS 0x0000000084000000, 0x0000000084000000| Complete 
+|  65|0x0000000084100000, 0x0000000084200000, 0x0000000084200000|100%| E|CS|TAMS 0x0000000084100000, 0x0000000084100000| Complete 
+|  66|0x0000000084200000, 0x0000000084300000, 0x0000000084300000|100%| E|CS|TAMS 0x0000000084200000, 0x0000000084200000| Complete 
+|  67|0x0000000084300000, 0x0000000084400000, 0x0000000084400000|100%| E|CS|TAMS 0x0000000084300000, 0x0000000084300000| Complete 
+|  68|0x0000000084400000, 0x0000000084500000, 0x0000000084500000|100%| E|CS|TAMS 0x0000000084400000, 0x0000000084400000| Complete 
+|  69|0x0000000084500000, 0x0000000084600000, 0x0000000084600000|100%| E|CS|TAMS 0x0000000084500000, 0x0000000084500000| Complete 
+|  70|0x0000000084600000, 0x0000000084700000, 0x0000000084700000|100%| E|CS|TAMS 0x0000000084600000, 0x0000000084600000| Complete 
+|  71|0x0000000084700000, 0x0000000084800000, 0x0000000084800000|100%| E|CS|TAMS 0x0000000084700000, 0x0000000084700000| Complete 
+|  72|0x0000000084800000, 0x0000000084900000, 0x0000000084900000|100%| E|CS|TAMS 0x0000000084800000, 0x0000000084800000| Complete 
+|  73|0x0000000084900000, 0x0000000084a00000, 0x0000000084a00000|100%| E|CS|TAMS 0x0000000084900000, 0x0000000084900000| Complete 
+|  74|0x0000000084a00000, 0x0000000084b00000, 0x0000000084b00000|100%| E|CS|TAMS 0x0000000084a00000, 0x0000000084a00000| Complete 
+|  75|0x0000000084b00000, 0x0000000084c00000, 0x0000000084c00000|100%| E|CS|TAMS 0x0000000084b00000, 0x0000000084b00000| Complete 
+|  76|0x0000000084c00000, 0x0000000084d00000, 0x0000000084d00000|100%| E|CS|TAMS 0x0000000084c00000, 0x0000000084c00000| Complete 
+|  77|0x0000000084d00000, 0x0000000084e00000, 0x0000000084e00000|100%| E|CS|TAMS 0x0000000084d00000, 0x0000000084d00000| Complete 
+|  78|0x0000000084e00000, 0x0000000084f00000, 0x0000000084f00000|100%| E|CS|TAMS 0x0000000084e00000, 0x0000000084e00000| Complete 
+|  79|0x0000000084f00000, 0x0000000085000000, 0x0000000085000000|100%| E|CS|TAMS 0x0000000084f00000, 0x0000000084f00000| Complete 
+|  80|0x0000000085000000, 0x0000000085100000, 0x0000000085100000|100%| E|CS|TAMS 0x0000000085000000, 0x0000000085000000| Complete 
+|  81|0x0000000085100000, 0x0000000085200000, 0x0000000085200000|100%| E|CS|TAMS 0x0000000085100000, 0x0000000085100000| Complete 
+|  82|0x0000000085200000, 0x0000000085300000, 0x0000000085300000|100%| E|CS|TAMS 0x0000000085200000, 0x0000000085200000| Complete 
+|  83|0x0000000085300000, 0x0000000085400000, 0x0000000085400000|100%| E|CS|TAMS 0x0000000085300000, 0x0000000085300000| Complete 
+|  84|0x0000000085400000, 0x0000000085500000, 0x0000000085500000|100%| E|CS|TAMS 0x0000000085400000, 0x0000000085400000| Complete 
+|  85|0x0000000085500000, 0x0000000085600000, 0x0000000085600000|100%| E|CS|TAMS 0x0000000085500000, 0x0000000085500000| Complete 
+|  86|0x0000000085600000, 0x0000000085700000, 0x0000000085700000|100%| E|CS|TAMS 0x0000000085600000, 0x0000000085600000| Complete 
+|  98|0x0000000086200000, 0x0000000086300000, 0x0000000086300000|100%| E|CS|TAMS 0x0000000086200000, 0x0000000086200000| Complete 
+|  99|0x0000000086300000, 0x0000000086400000, 0x0000000086400000|100%| E|CS|TAMS 0x0000000086300000, 0x0000000086300000| Complete 
+| 100|0x0000000086400000, 0x0000000086500000, 0x0000000086500000|100%| E|CS|TAMS 0x0000000086400000, 0x0000000086400000| Complete 
+| 101|0x0000000086500000, 0x0000000086600000, 0x0000000086600000|100%| E|CS|TAMS 0x0000000086500000, 0x0000000086500000| Complete 
+| 102|0x0000000086600000, 0x0000000086700000, 0x0000000086700000|100%| E|CS|TAMS 0x0000000086600000, 0x0000000086600000| Complete 
+| 125|0x0000000087d00000, 0x0000000087e00000, 0x0000000087e00000|100%| E|CS|TAMS 0x0000000087d00000, 0x0000000087d00000| Complete 
+
+Card table byte_map: [0x0000012b17fe0000,0x0000012b183e0000] _byte_map_base: 0x0000012b17be0000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x0000012b0528fea0, (CMBitMap*) 0x0000012b0528fee0
+ Prev Bits: [0x0000012b187e0000, 0x0000012b1a7e0000)
+ Next Bits: [0x0000012b1a7e0000, 0x0000012b1c7e0000)
+
+Polling page: 0x0000012b031d0000
+
+Metaspace:
+
+Usage:
+  Non-class:     34.98 MB used.
+      Class:      4.34 MB used.
+       Both:     39.32 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,      35.25 MB ( 55%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,       4.56 MB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,      39.81 MB (  4%) committed. 
+
+Chunk freelists:
+   Non-Class:  12.08 MB
+       Class:  11.38 MB
+        Both:  23.45 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 58.69 MB
+CDS: off
+MetaspaceReclaimPolicy: balanced
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - new_chunks_are_fully_committed: 0.
+ - uncommit_free_chunks: 1.
+ - use_allocation_guard: 0.
+ - handle_deallocations: 1.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 6.
+num_arena_births: 648.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 637.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 6.
+num_chunks_taken_from_freelist: 1598.
+num_chunk_merges: 6.
+num_chunk_splits: 1065.
+num_chunks_enlarged: 702.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=120000Kb used=1886Kb max_used=2391Kb free=118114Kb
+ bounds [0x0000012b10380000, 0x0000012b105f0000, 0x0000012b178b0000]
+CodeHeap 'profiled nmethods': size=120000Kb used=6834Kb max_used=8491Kb free=113165Kb
+ bounds [0x0000012b088b0000, 0x0000012b09100000, 0x0000012b0fde0000]
+CodeHeap 'non-nmethods': size=5760Kb used=2310Kb max_used=2360Kb free=3450Kb
+ bounds [0x0000012b0fde0000, 0x0000012b10050000, 0x0000012b10380000]
+ total_blobs=4725 nmethods=3913 adapters=724
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 22.316 Thread 0x0000012b1f2d6f10 4882       4       java.lang.invoke.MethodType::makeImpl (109 bytes)
+Event: 22.317 Thread 0x0000012b1f2d7810 nmethod 4881 0x0000012b08b22090 code [0x0000012b08b222e0, 0x0000012b08b22db8]
+Event: 22.318 Thread 0x0000012b1f2d7810 4884       3       java.util.Formatter$Flags::contains (22 bytes)
+Event: 22.318 Thread 0x0000012b1f2d7810 nmethod 4884 0x0000012b08bbce90 code [0x0000012b08bbd020, 0x0000012b08bbd1b8]
+Event: 22.318 Thread 0x0000012b1f2d7810 4885       3       java.lang.AbstractStringBuilder::append (54 bytes)
+Event: 22.319 Thread 0x0000012b1f2d7810 nmethod 4885 0x0000012b08a84a10 code [0x0000012b08a84c40, 0x0000012b08a85548]
+Event: 22.319 Thread 0x0000012b1f2d7810 4886       3       java.lang.StringBuilder::append (8 bytes)
+Event: 22.319 Thread 0x0000012b1f2d7810 nmethod 4886 0x0000012b08cfa190 code [0x0000012b08cfa320, 0x0000012b08cfa468]
+Event: 22.333 Thread 0x0000012b1f2d7810 4887       3       java.lang.invoke.MethodHandles$Lookup::getDirectConstructorCommon (69 bytes)
+Event: 22.334 Thread 0x0000012b1f2d7810 nmethod 4887 0x0000012b08a12810 code [0x0000012b08a12a80, 0x0000012b08a13598]
+Event: 22.334 Thread 0x0000012b1f2d7810 4888       3       java.lang.invoke.MemberName::asConstructor (58 bytes)
+Event: 22.334 Thread 0x0000012b1f2d7810 nmethod 4888 0x0000012b08d15310 code [0x0000012b08d15520, 0x0000012b08d15b28]
+Event: 22.334 Thread 0x0000012b1f2d7810 4890       1       java.lang.invoke.DirectMethodHandle$Special::isInvokeSpecial (2 bytes)
+Event: 22.334 Thread 0x0000012b1f2d7810 nmethod 4890 0x0000012b103fc310 code [0x0000012b103fc4a0, 0x0000012b103fc578]
+Event: 22.339 Thread 0x0000012b1f2d7810 4892       3       java.lang.invoke.MethodHandles$Lookup::findConstructor (61 bytes)
+Event: 22.339 Thread 0x0000012b1f2d7810 nmethod 4892 0x0000012b08a24a90 code [0x0000012b08a24d00, 0x0000012b08a25518]
+Event: 22.339 Thread 0x0000012b1f2d7810 4893       3       java.lang.invoke.MethodHandles$Lookup::getDirectConstructor (10 bytes)
+Event: 22.339 Thread 0x0000012b1f2d7810 nmethod 4893 0x0000012b08d12710 code [0x0000012b08d128a0, 0x0000012b08d129e8]
+Event: 22.340 Thread 0x0000012b1f2d7810 4895       3       java.lang.invoke.DirectMethodHandle$Constructor::viewAsType (49 bytes)
+Event: 22.341 Thread 0x0000012b1f2d7810 nmethod 4895 0x0000012b08cf2490 code [0x0000012b08cf2640, 0x0000012b08cf2808]
+
+GC Heap History (20 events):
+Event: 2.718 GC heap before
+{Heap before GC invocations=1 (full 0):
+ garbage-first heap   total 129024K, used 35883K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 25 young (25600K), 3 survivors (3072K)
+ Metaspace       used 12059K, committed 12288K, reserved 1114112K
+  class space    used 1023K, committed 1152K, reserved 1048576K
+}
+Event: 2.724 GC heap after
+{Heap after GC invocations=2 (full 0):
+ garbage-first heap   total 129024K, used 16854K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 3 young (3072K), 3 survivors (3072K)
+ Metaspace       used 12059K, committed 12288K, reserved 1114112K
+  class space    used 1023K, committed 1152K, reserved 1048576K
+}
+Event: 3.679 GC heap before
+{Heap before GC invocations=2 (full 0):
+ garbage-first heap   total 129024K, used 59862K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 43 young (44032K), 3 survivors (3072K)
+ Metaspace       used 17791K, committed 18048K, reserved 1114112K
+  class space    used 1670K, committed 1792K, reserved 1048576K
+}
+Event: 3.685 GC heap after
+{Heap after GC invocations=3 (full 0):
+ garbage-first heap   total 129024K, used 22182K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 6 survivors (6144K)
+ Metaspace       used 17791K, committed 18048K, reserved 1114112K
+  class space    used 1670K, committed 1792K, reserved 1048576K
+}
+Event: 4.289 GC heap before
+{Heap before GC invocations=3 (full 0):
+ garbage-first heap   total 129024K, used 44710K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 29 young (29696K), 6 survivors (6144K)
+ Metaspace       used 21314K, committed 21504K, reserved 1114112K
+  class space    used 2234K, committed 2304K, reserved 1048576K
+}
+Event: 4.296 GC heap after
+{Heap after GC invocations=4 (full 0):
+ garbage-first heap   total 129024K, used 21442K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 5 survivors (5120K)
+ Metaspace       used 21314K, committed 21504K, reserved 1114112K
+  class space    used 2234K, committed 2304K, reserved 1048576K
+}
+Event: 4.539 GC heap before
+{Heap before GC invocations=5 (full 0):
+ garbage-first heap   total 78848K, used 62402K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 46 young (47104K), 5 survivors (5120K)
+ Metaspace       used 22093K, committed 22336K, reserved 1114112K
+  class space    used 2310K, committed 2432K, reserved 1048576K
+}
+Event: 4.547 GC heap after
+{Heap after GC invocations=6 (full 0):
+ garbage-first heap   total 78848K, used 22353K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 6 survivors (6144K)
+ Metaspace       used 22093K, committed 22336K, reserved 1114112K
+  class space    used 2310K, committed 2432K, reserved 1048576K
+}
+Event: 5.075 GC heap before
+{Heap before GC invocations=6 (full 0):
+ garbage-first heap   total 78848K, used 56145K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 39 young (39936K), 6 survivors (6144K)
+ Metaspace       used 26007K, committed 26304K, reserved 1114112K
+  class space    used 2721K, committed 2880K, reserved 1048576K
+}
+Event: 5.084 GC heap after
+{Heap after GC invocations=7 (full 0):
+ garbage-first heap   total 78848K, used 25124K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 5 survivors (5120K)
+ Metaspace       used 26007K, committed 26304K, reserved 1114112K
+  class space    used 2721K, committed 2880K, reserved 1048576K
+}
+Event: 5.695 GC heap before
+{Heap before GC invocations=7 (full 0):
+ garbage-first heap   total 78848K, used 56868K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 36 young (36864K), 5 survivors (5120K)
+ Metaspace       used 30546K, committed 30912K, reserved 1114112K
+  class space    used 3269K, committed 3456K, reserved 1048576K
+}
+Event: 5.705 GC heap after
+{Heap after GC invocations=8 (full 0):
+ garbage-first heap   total 78848K, used 27234K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 3 young (3072K), 3 survivors (3072K)
+ Metaspace       used 30546K, committed 30912K, reserved 1114112K
+  class space    used 3269K, committed 3456K, reserved 1048576K
+}
+Event: 5.826 GC heap before
+{Heap before GC invocations=8 (full 0):
+ garbage-first heap   total 78848K, used 61026K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 33 young (33792K), 3 survivors (3072K)
+ Metaspace       used 31684K, committed 32064K, reserved 1114112K
+  class space    used 3344K, committed 3520K, reserved 1048576K
+}
+Event: 5.830 GC heap after
+{Heap after GC invocations=9 (full 0):
+ garbage-first heap   total 95232K, used 27613K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 3 young (3072K), 3 survivors (3072K)
+ Metaspace       used 31684K, committed 32064K, reserved 1114112K
+  class space    used 3344K, committed 3520K, reserved 1048576K
+}
+Event: 6.252 GC heap before
+{Heap before GC invocations=9 (full 0):
+ garbage-first heap   total 95232K, used 70621K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 45 young (46080K), 3 survivors (3072K)
+ Metaspace       used 33715K, committed 34112K, reserved 1114112K
+  class space    used 3575K, committed 3776K, reserved 1048576K
+}
+Event: 6.257 GC heap after
+{Heap after GC invocations=10 (full 0):
+ garbage-first heap   total 95232K, used 28580K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 4 young (4096K), 4 survivors (4096K)
+ Metaspace       used 33715K, committed 34112K, reserved 1114112K
+  class space    used 3575K, committed 3776K, reserved 1048576K
+}
+Event: 6.625 GC heap before
+{Heap before GC invocations=10 (full 0):
+ garbage-first heap   total 95232K, used 73636K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 48 young (49152K), 4 survivors (4096K)
+ Metaspace       used 34156K, committed 34560K, reserved 1114112K
+  class space    used 3608K, committed 3776K, reserved 1048576K
+}
+Event: 6.632 GC heap after
+{Heap after GC invocations=11 (full 0):
+ garbage-first heap   total 95232K, used 29983K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 3 young (3072K), 3 survivors (3072K)
+ Metaspace       used 34156K, committed 34560K, reserved 1114112K
+  class space    used 3608K, committed 3776K, reserved 1048576K
+}
+Event: 7.011 GC heap before
+{Heap before GC invocations=11 (full 0):
+ garbage-first heap   total 95232K, used 59679K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 33 young (33792K), 3 survivors (3072K)
+ Metaspace       used 35554K, committed 35968K, reserved 1114112K
+  class space    used 3817K, committed 4032K, reserved 1048576K
+}
+Event: 7.022 GC heap after
+{Heap after GC invocations=12 (full 0):
+ garbage-first heap   total 95232K, used 32342K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 6 survivors (6144K)
+ Metaspace       used 35554K, committed 35968K, reserved 1114112K
+  class space    used 3817K, committed 4032K, reserved 1048576K
+}
+
+Dll operation events (9 events):
+Event: 0.096 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\java.dll
+Event: 0.671 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\net.dll
+Event: 0.679 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\nio.dll
+Event: 0.692 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\zip.dll
+Event: 1.756 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\verify.dll
+Event: 2.189 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\jimage.dll
+Event: 13.230 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\management.dll
+Event: 13.259 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\management_ext.dll
+Event: 21.098 Loaded shared library C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\sunmscapi.dll
+
+Deoptimization events (20 events):
+Event: 21.887 Thread 0x0000012b052319f0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000012b1041dcf4 relative=0x0000000000000154
+Event: 21.887 Thread 0x0000012b052319f0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000012b1041dcf4 method=java.lang.AbstractStringBuilder.putStringAt(ILjava/lang/String;II)V @ 8 c2
+Event: 21.887 Thread 0x0000012b052319f0 DEOPT PACKING pc=0x0000012b1041dcf4 sp=0x00000006626fb640
+Event: 21.887 Thread 0x0000012b052319f0 DEOPT UNPACKING pc=0x0000012b0fe3a1a3 sp=0x00000006626fb588 mode 2
+Event: 21.887 Thread 0x0000012b052319f0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000012b103f1410 relative=0x00000000000004f0
+Event: 21.887 Thread 0x0000012b052319f0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000012b103f1410 method=java.lang.String.substring(II)Ljava/lang/String; @ 31 c2
+Event: 21.887 Thread 0x0000012b052319f0 DEOPT PACKING pc=0x0000012b103f1410 sp=0x00000006626fb5b0
+Event: 21.887 Thread 0x0000012b052319f0 DEOPT UNPACKING pc=0x0000012b0fe3a1a3 sp=0x00000006626fb580 mode 2
+Event: 21.901 Thread 0x0000012b052319f0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000012b10473998 relative=0x00000000000000f8
+Event: 21.901 Thread 0x0000012b052319f0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000012b10473998 method=java.util.ArrayList.indexOfRange(Ljava/lang/Object;II)I @ 7 c2
+Event: 21.901 Thread 0x0000012b052319f0 DEOPT PACKING pc=0x0000012b10473998 sp=0x00000006626fbbc0
+Event: 21.901 Thread 0x0000012b052319f0 DEOPT UNPACKING pc=0x0000012b0fe3a1a3 sp=0x00000006626fbae8 mode 2
+Event: 21.901 Thread 0x0000012b052319f0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000012b1047328c relative=0x00000000000000ec
+Event: 21.901 Thread 0x0000012b052319f0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000012b1047328c method=java.util.ArrayList.indexOfRange(Ljava/lang/Object;II)I @ 7 c2
+Event: 21.901 Thread 0x0000012b052319f0 DEOPT PACKING pc=0x0000012b1047328c sp=0x00000006626fbb50
+Event: 21.901 Thread 0x0000012b052319f0 DEOPT UNPACKING pc=0x0000012b0fe3a1a3 sp=0x00000006626fbaf0 mode 2
+Event: 22.291 Thread 0x0000012b052319f0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000012b1053475c relative=0x00000000000032fc
+Event: 22.291 Thread 0x0000012b052319f0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000012b1053475c method=jdk.internal.org.objectweb.asm.Frame.push(Ljdk/internal/org/objectweb/asm/SymbolTable;Ljava/lang/String;)V @ 49 c2
+Event: 22.291 Thread 0x0000012b052319f0 DEOPT PACKING pc=0x0000012b1053475c sp=0x00000006626f9df0
+Event: 22.291 Thread 0x0000012b052319f0 DEOPT UNPACKING pc=0x0000012b0fe3a1a3 sp=0x00000006626f9d00 mode 2
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 18.403 Thread 0x0000012b25f97160 Exception <a 'java/net/ConnectException'{0x0000000085214358}: Connection refused: no further information> (0x0000000085214358) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 18.403 Thread 0x0000012b25f97160 Exception <a 'java/net/SocketException'{0x0000000085214690}: Socket is not connected: shutdown> (0x0000000085214690) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 18.727 Thread 0x0000012b25f97160 Exception <a 'java/net/ConnectException'{0x0000000085215790}: Connection refused: no further information> (0x0000000085215790) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 18.727 Thread 0x0000012b25f97160 Exception <a 'java/net/SocketException'{0x0000000085215ac8}: Socket is not connected: shutdown> (0x0000000085215ac8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 19.066 Thread 0x0000012b25f97160 Exception <a 'java/net/ConnectException'{0x0000000085216bc8}: Connection refused: no further information> (0x0000000085216bc8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 19.067 Thread 0x0000012b25f97160 Exception <a 'java/net/SocketException'{0x0000000085216f00}: Socket is not connected: shutdown> (0x0000000085216f00) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 19.392 Thread 0x0000012b25f97160 Exception <a 'java/net/ConnectException'{0x0000000085218000}: Connection refused: no further information> (0x0000000085218000) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 19.392 Thread 0x0000012b25f97160 Exception <a 'java/net/SocketException'{0x0000000085218338}: Socket is not connected: shutdown> (0x0000000085218338) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 19.718 Thread 0x0000012b25f97160 Exception <a 'java/net/ConnectException'{0x0000000085219438}: Connection refused: no further information> (0x0000000085219438) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 19.718 Thread 0x0000012b25f97160 Exception <a 'java/net/SocketException'{0x0000000085219770}: Socket is not connected: shutdown> (0x0000000085219770) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 20.044 Thread 0x0000012b25f97160 Exception <a 'java/net/ConnectException'{0x000000008521a870}: Connection refused: no further information> (0x000000008521a870) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 20.044 Thread 0x0000012b25f97160 Exception <a 'java/net/SocketException'{0x000000008521aba8}: Socket is not connected: shutdown> (0x000000008521aba8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 21.385 Thread 0x0000012b052319f0 Exception <a 'sun/nio/fs/WindowsException'{0x00000000849fade8}> (0x00000000849fade8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 516]
+Event: 21.625 Thread 0x0000012b052319f0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000848c3fb0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, int, int, int, int)'> (0x00000000848c3fb0) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 21.824 Thread 0x0000012b052319f0 Exception <a 'java/lang/NoSuchMethodError'{0x000000008471bfa0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object, int, int, int, int)'> (0x000000008471bfa0) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 22.260 Thread 0x0000012b052319f0 Exception <a 'java/lang/IncompatibleClassChangeError'{0x0000000084335530}: Found class java.lang.Object, but interface was expected> (0x0000000084335530) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 826]
+Event: 22.264 Thread 0x0000012b052319f0 Exception <a 'java/lang/NoSuchMethodError'{0x000000008433c110}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeSpecialIFC(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x000000008433c110) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 22.291 Thread 0x0000012b052319f0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000843d62d0}: 'double java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.lang.Object, java.lang.Object)'> (0x00000000843d62d0) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 22.293 Thread 0x0000012b052319f0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000843dccf8}: 'float java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.lang.Object, java.lang.Object)'> (0x00000000843dccf8) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+Event: 22.294 Thread 0x0000012b052319f0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000843e5f98}: 'long java.lang.invoke.DirectMethodHandle$Holder.invokeVirtual(java.lang.Object, java.lang.Object)'> (0x00000000843e5f98) 
+thrown [s\src\hotspot\share\interpreter\linkResolver.cpp, line 759]
+
+VM Operations (20 events):
+Event: 20.462 Executing VM operation: Cleanup
+Event: 20.495 Executing VM operation: Cleanup done
+Event: 20.495 Executing VM operation: HandshakeAllThreads
+Event: 20.496 Executing VM operation: HandshakeAllThreads done
+Event: 20.502 Executing VM operation: HandshakeAllThreads
+Event: 20.502 Executing VM operation: HandshakeAllThreads done
+Event: 20.516 Executing VM operation: HandshakeAllThreads
+Event: 20.525 Executing VM operation: HandshakeAllThreads done
+Event: 20.525 Executing VM operation: HandshakeAllThreads
+Event: 20.526 Executing VM operation: HandshakeAllThreads done
+Event: 20.890 Executing VM operation: HandshakeAllThreads
+Event: 20.890 Executing VM operation: HandshakeAllThreads done
+Event: 20.931 Executing VM operation: HandshakeAllThreads
+Event: 20.931 Executing VM operation: HandshakeAllThreads done
+Event: 21.076 Executing VM operation: HandshakeAllThreads
+Event: 21.076 Executing VM operation: HandshakeAllThreads done
+Event: 21.393 Executing VM operation: HandshakeAllThreads
+Event: 21.394 Executing VM operation: HandshakeAllThreads done
+Event: 21.395 Executing VM operation: HandshakeAllThreads
+Event: 21.395 Executing VM operation: HandshakeAllThreads done
+
+Events (20 events):
+Event: 21.628 loading class java/security/DrbgParameters$NextBytes
+Event: 21.628 loading class java/security/DrbgParameters$NextBytes done
+Event: 21.628 loading class sun/security/provider/AbstractDrbg$SeederHolder
+Event: 21.628 loading class sun/security/provider/AbstractDrbg$SeederHolder done
+Event: 21.628 loading class sun/security/provider/SeedGenerator
+Event: 21.632 loading class sun/security/provider/SeedGenerator done
+Event: 21.632 loading class sun/security/provider/NativeSeedGenerator
+Event: 21.632 loading class sun/security/provider/NativeSeedGenerator done
+Event: 21.747 loading class sun/security/provider/SeedGenerator$1
+Event: 21.748 loading class sun/security/provider/SeedGenerator$1 done
+Event: 21.826 loading class sun/security/provider/AbstractDrbg$NonceProvider
+Event: 21.826 loading class sun/security/provider/AbstractDrbg$NonceProvider done
+Event: 21.827 loading class sun/security/ssl/SSLSocketFactoryImpl
+Event: 21.827 loading class javax/net/ssl/SSLSocketFactory
+Event: 21.827 loading class javax/net/ssl/SSLSocketFactory done
+Event: 21.827 loading class sun/security/ssl/SSLSocketFactoryImpl done
+Event: 21.879 loading class jdk/internal/icu/impl/NormalizerImpl$UTF16Plus
+Event: 21.883 loading class jdk/internal/icu/impl/NormalizerImpl$UTF16Plus done
+Event: 21.883 loading class jdk/internal/icu/impl/NormalizerImpl$ReorderingBuffer
+Event: 21.886 loading class jdk/internal/icu/impl/NormalizerImpl$ReorderingBuffer done
+
+
+Dynamic libraries:
+0x00007ff686f50000 - 0x00007ff686f5e000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\javaw.exe
+0x00007ffe8f8d0000 - 0x00007ffe8fac8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffe8eb90000 - 0x00007ffe8ec4d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffe8d0a0000 - 0x00007ffe8d396000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffe8d5b0000 - 0x00007ffe8d6b0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffe847f0000 - 0x00007ffe84807000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\jli.dll
+0x00007ffe8a020000 - 0x00007ffe8a039000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\VCRUNTIME140.dll
+0x00007ffe77b80000 - 0x00007ffe77e1a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007ffe8e3b0000 - 0x00007ffe8e54e000 	C:\Windows\System32\USER32.dll
+0x00007ffe8d430000 - 0x00007ffe8d452000 	C:\Windows\System32\win32u.dll
+0x00007ffe8e650000 - 0x00007ffe8e6ee000 	C:\Windows\System32\msvcrt.dll
+0x00007ffe8dd80000 - 0x00007ffe8ddab000 	C:\Windows\System32\GDI32.dll
+0x00007ffe8cf80000 - 0x00007ffe8d097000 	C:\Windows\System32\gdi32full.dll
+0x00007ffe8d6b0000 - 0x00007ffe8d74d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffe8eab0000 - 0x00007ffe8eae2000 	C:\Windows\System32\IMM32.DLL
+0x00007ffe7efb0000 - 0x00007ffe7efbc000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\vcruntime140_1.dll
+0x00007ffe6ca80000 - 0x00007ffe6cb11000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\msvcp140.dll
+0x00007ffe4e1f0000 - 0x00007ffe4ee38000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\server\jvm.dll
+0x00007ffe8f700000 - 0x00007ffe8f7b0000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffe8eaf0000 - 0x00007ffe8eb90000 	C:\Windows\System32\sechost.dll
+0x00007ffe8de10000 - 0x00007ffe8df35000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffe8d4d0000 - 0x00007ffe8d4f7000 	C:\Windows\System32\bcrypt.dll
+0x00007ffe6d320000 - 0x00007ffe6d347000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe7eb00000 - 0x00007ffe7eb0a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffe8a1d0000 - 0x00007ffe8a1d9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffe8f560000 - 0x00007ffe8f5cb000 	C:\Windows\System32\WS2_32.dll
+0x00007ffe8b6f0000 - 0x00007ffe8b702000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffe7efa0000 - 0x00007ffe7efaa000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\jimage.dll
+0x00007ffe8a9d0000 - 0x00007ffe8abb4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffe6a2b0000 - 0x00007ffe6a2e4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffe8d3a0000 - 0x00007ffe8d422000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffe77590000 - 0x00007ffe775b5000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\java.dll
+0x00007ffe76420000 - 0x00007ffe76438000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\zip.dll
+0x00007ffe8edf0000 - 0x00007ffe8f55b000 	C:\Windows\System32\SHELL32.dll
+0x00007ffe8ae30000 - 0x00007ffe8b5ce000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffe8e6f0000 - 0x00007ffe8ea43000 	C:\Windows\System32\combase.dll
+0x00007ffe8c9b0000 - 0x00007ffe8c9de000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ffe8ec50000 - 0x00007ffe8ed1d000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffe8ed40000 - 0x00007ffe8eded000 	C:\Windows\System32\SHCORE.dll
+0x00007ffe8ddb0000 - 0x00007ffe8de05000 	C:\Windows\System32\shlwapi.dll
+0x00007ffe8ceb0000 - 0x00007ffe8ced5000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffe6c9d0000 - 0x00007ffe6c9e9000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\net.dll
+0x00007ffe893d0000 - 0x00007ffe894da000 	C:\Windows\SYSTEM32\WINHTTP.dll
+0x00007ffe8c710000 - 0x00007ffe8c77a000 	C:\Windows\system32\mswsock.dll
+0x00007ffe6bc00000 - 0x00007ffe6bc15000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\nio.dll
+0x00007ffe7ef50000 - 0x00007ffe7ef60000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\verify.dll
+0x00007ffe845b0000 - 0x00007ffe845b9000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\management.dll
+0x00007ffe7bc10000 - 0x00007ffe7bc1b000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\management_ext.dll
+0x00007ffe8f6f0000 - 0x00007ffe8f6f8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffe8c3b0000 - 0x00007ffe8c3eb000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffe8e640000 - 0x00007ffe8e648000 	C:\Windows\System32\NSI.dll
+0x00007ffe86ef0000 - 0x00007ffe86f07000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffe86fd0000 - 0x00007ffe86fed000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x00007ffe8c3f0000 - 0x00007ffe8c4bb000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ffe7eea0000 - 0x00007ffe7eeae000 	C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\sunmscapi.dll
+0x00007ffe8d750000 - 0x00007ffe8d8ad000 	C:\Windows\System32\CRYPT32.dll
+0x00007ffe8ca20000 - 0x00007ffe8ca48000 	C:\Windows\SYSTEM32\ncrypt.dll
+0x00007ffe8c9e0000 - 0x00007ffe8ca1b000 	C:\Windows\SYSTEM32\NTASN1.dll
+0x00007ffe8c900000 - 0x00007ffe8c918000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007ffe8bfd0000 - 0x00007ffe8c004000 	C:\Windows\system32\rsaenh.dll
+0x00007ffe8ce30000 - 0x00007ffe8ce5e000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffe8c920000 - 0x00007ffe8c92c000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dgroovy.home=C:\Users\Phuong/.groovy -Djava.system.class.loader=groovy.lang.GroovyClassLoader -Xmx2048m -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.codehaus.groovy.tools.GroovyStarter --classpath C:\Users\Phuong\Katalon Studio\FixAllNow\bin\keyword;C:\Users\Phuong\Katalon Studio\FixAllNow\Keywords;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\listener;C:\Users\Phuong\Katalon Studio\FixAllNow\Test Listeners;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\lib;C:\Users\Phuong\Katalon Studio\FixAllNow\Libs;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\groovy;C:\Users\Phuong\Katalon Studio\FixAllNow\Include\scripts\groovy;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-collections4-4.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-validator-1.6.jar;C:\Users\Ph
+java_class_path (initial): C:\Users\Phuong\Katalon Studio\FixAllNow\bin\keyword;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\listener;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\lib;C:\Users\Phuong\Katalon Studio\FixAllNow\bin\groovy;C:\Users\Phuong\Katalon Studio\FixAllNow\bin;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\plugins\com.kms.katalon.core_1.0.0.202402280646.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-collections4-4.1.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\commons-validator-1.6.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\configuration\resources\lib\curvesapi-1.04.jar;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_St
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2147483648                                {product} {command line}
+   size_t MaxNewSize                               = 1287651328                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 2147483648                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre
+PATH=C:/Users/Phuong/.katalon/packages/Katalon_Studio_Windows_64-9.3.1/Katalon_Studio_Windows_64-9.3.1/jre/bin/server;C:/Users/Phuong/.katalon/packages/Katalon_Studio_Windows_64-9.3.1/Katalon_Studio_Windows_64-9.3.1/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Phuong\AppData\Local\Android\Sdk\tools;C:\Users\Phuong\AppData\Local\jdk-11.0.2\bin;C:\Users\Phuong\AppData\Local\Android\Sdk\platform-tools;C:\Users\Phuong\AppData\Local\Microsoft\WindowsApps;C:\Users\Phuong\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Phuong\AppData\Roaming\npm;;C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1;:C:\Users\Phuong\.katalon\packages\Katalon_Studio_Windows_64-9.3.1\Katalon_Studio_Windows_64-9.3.1\jre\bin
+USERNAME=Phuong
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+TMP=C:\Users\Phuong\AppData\Local\Temp
+TEMP=C:\Users\Phuong\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 0 days 5:49 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0x8a, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi
+
+Memory: 4k page, system-wide physical 7971M (143M free)
+TotalPageFile size 32165M (AvailPageFile size 3M)
+current process WorkingSet (physical memory assigned to process): 94M, peak: 184M
+current process commit charge ("private bytes"): 244M, peak: 269M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.7+7) for windows-amd64 JRE (17.0.7+7), built on Apr 18 2023 22:10:42 by "temurin" with MS VC++ 16.7 (VS2019)
+
+END.
