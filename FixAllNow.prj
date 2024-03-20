@@ -5,8 +5,9 @@
    <tag></tag>
    <UUID>b4219ec7-f483-4030-96cb-9b51a9509996</UUID>
    <createdVersion>9.3.1</createdVersion>
-   <freeLicense>false</freeLicense>
+   <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
+   <modifiedVersion>9.3.1</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <projectFileLocation>C:\Users\Phuong\Katalon Studio\FixAllNow\FixAllNow.prj</projectFileLocation>
    <sourceContent>
@@ -27,6 +28,6 @@
          </systemFolderConfiguration>
       </systemFolderList>
    </sourceContent>
-   <timeStampInProperties>false</timeStampInProperties>
+   <timeStampInProperties>true</timeStampInProperties>
    <type>MOBILE</type>
 </Project>
